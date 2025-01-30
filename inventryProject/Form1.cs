@@ -18,7 +18,8 @@ namespace inventryProject
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-9L1GMLB;Initial Catalog=inventory;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-9L1GMLB;Initial Catalog=inventory;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -32,6 +33,20 @@ namespace inventryProject
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insertbtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into inventory values('" + int.Parse(productid.Text) + "','" + (productName.Text) + "','" + (productType.Text) + "','" + (productQuntity.Text) + "','" + (productColor.Text) + "','" + (date.Text) + "') ",con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Data Insert Success..");
+            con.Close();
         }
     }
 }
