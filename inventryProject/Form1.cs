@@ -59,6 +59,14 @@ namespace inventryProject
             BindData();
         }
 
-        
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update inventory set productName= '" + productName.Text + "',productType= '" + productType.Text + "',productQuntity= '" + productQuntity.Text + "',productColor='" + productColor.Text + "',date= '" + date.Text + "'"+ "where productid ='" + int.Parse(productid.Text) + "' ", con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Data Update Success..");
+            con.Close();
+            BindData();
+        }
     }
 }
