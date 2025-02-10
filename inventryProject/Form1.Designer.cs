@@ -231,6 +231,7 @@
             this.deletebtn.TabIndex = 17;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // searchbtn
             // 

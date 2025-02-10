@@ -68,5 +68,25 @@ namespace inventryProject
             con.Close();
             BindData();
         }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            if(productid.Text != "")
+            {
+                if(MessageBox.Show("Are You Sure To Delete This Data ?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Delete inventory where productid= '" + int.Parse(productid.Text) + "'",con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Data Delete Success");
+                    BindData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Put ID");
+            }
+        }
     }
 }
