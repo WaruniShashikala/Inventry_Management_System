@@ -88,5 +88,21 @@ namespace inventryProject
                 MessageBox.Show("Please Put ID");
             }
         }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            if(productid.Text !="")
+            {
+                SqlCommand cmd = new SqlCommand("select * from inventory where productid= '" + int.Parse(productid.Text) + "' ", con);
+                SqlDataAdapter sd = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Put Id");
+            }
+        }
     }
 }
