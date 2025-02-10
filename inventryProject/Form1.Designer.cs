@@ -76,7 +76,7 @@
             // productid
             // 
             this.productid.Location = new System.Drawing.Point(223, 126);
-            this.productid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productid.Margin = new System.Windows.Forms.Padding(4);
             this.productid.Name = "productid";
             this.productid.Size = new System.Drawing.Size(221, 22);
             this.productid.TabIndex = 2;
@@ -96,7 +96,7 @@
             // productType
             // 
             this.productType.Location = new System.Drawing.Point(223, 181);
-            this.productType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productType.Margin = new System.Windows.Forms.Padding(4);
             this.productType.Name = "productType";
             this.productType.Size = new System.Drawing.Size(285, 22);
             this.productType.TabIndex = 4;
@@ -126,7 +126,7 @@
             // productName
             // 
             this.productName.Location = new System.Drawing.Point(947, 122);
-            this.productName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productName.Margin = new System.Windows.Forms.Padding(4);
             this.productName.Name = "productName";
             this.productName.Size = new System.Drawing.Size(285, 22);
             this.productName.TabIndex = 8;
@@ -134,7 +134,7 @@
             // productQuntity
             // 
             this.productQuntity.Location = new System.Drawing.Point(947, 180);
-            this.productQuntity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productQuntity.Margin = new System.Windows.Forms.Padding(4);
             this.productQuntity.Name = "productQuntity";
             this.productQuntity.Size = new System.Drawing.Size(285, 22);
             this.productQuntity.TabIndex = 9;
@@ -172,7 +172,7 @@
             "Yellow",
             "Blue"});
             this.productColor.Location = new System.Drawing.Point(223, 242);
-            this.productColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productColor.Margin = new System.Windows.Forms.Padding(4);
             this.productColor.Name = "productColor";
             this.productColor.Size = new System.Drawing.Size(285, 24);
             this.productColor.TabIndex = 12;
@@ -181,7 +181,7 @@
             // 
             this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.date.Location = new System.Drawing.Point(947, 242);
-            this.date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.date.Margin = new System.Windows.Forms.Padding(4);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(285, 22);
             this.date.TabIndex = 13;
@@ -191,7 +191,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(126, 457);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1120, 336);
@@ -201,7 +201,7 @@
             // 
             this.insertbtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insertbtn.Location = new System.Drawing.Point(127, 310);
-            this.insertbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertbtn.Margin = new System.Windows.Forms.Padding(4);
             this.insertbtn.Name = "insertbtn";
             this.insertbtn.Size = new System.Drawing.Size(100, 28);
             this.insertbtn.TabIndex = 15;
@@ -213,18 +213,19 @@
             // 
             this.updatebtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.updatebtn.Location = new System.Drawing.Point(572, 310);
-            this.updatebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Size = new System.Drawing.Size(100, 28);
             this.updatebtn.TabIndex = 16;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // deletebtn
             // 
             this.deletebtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.deletebtn.Location = new System.Drawing.Point(1132, 310);
-            this.deletebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deletebtn.Margin = new System.Windows.Forms.Padding(4);
             this.deletebtn.Name = "deletebtn";
             this.deletebtn.Size = new System.Drawing.Size(100, 28);
             this.deletebtn.TabIndex = 17;
@@ -235,7 +236,7 @@
             // 
             this.searchbtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.searchbtn.Location = new System.Drawing.Point(471, 122);
-            this.searchbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchbtn.Margin = new System.Windows.Forms.Padding(4);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(100, 28);
             this.searchbtn.TabIndex = 18;

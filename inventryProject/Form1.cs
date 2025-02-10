@@ -22,7 +22,7 @@ namespace inventryProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            BindData();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -40,6 +40,15 @@ namespace inventryProject
 
         }
 
+        void BindData()
+        {
+            SqlCommand cmd = new SqlCommand("select * from inventory", con);
+            SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
         private void insertbtn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -47,6 +56,9 @@ namespace inventryProject
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Insert Success..");
             con.Close();
+            BindData();
         }
+
+        
     }
 }
